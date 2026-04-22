@@ -55,6 +55,5 @@ st.markdown("""
 st.markdown("---")
 
 st.info(
-    "Production deployment is live on AWS ECS. This dashboard presents a fictional "
-    "data center operating case study supported by real market and industry benchmarks."
+    "Production deployment is live on AWS ECS and updates are now managed through GitHub Actions."
 )
