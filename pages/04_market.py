@@ -40,15 +40,6 @@ fig_city = px.bar(
 )
 st.plotly_chart(fig_city, use_container_width=True)
 
-csv_data = city_data.to_csv(index=False).encode("utf-8")
-
-st.download_button(
-    label="Download Mexico market data as CSV",
-    data=csv_data,
-    file_name="mexico_market_data.csv",
-    mime="text/csv"
-)
-
 fig_latam = px.bar(
     latam_metrics,
     x="Metric",
@@ -61,6 +52,15 @@ st.subheader("Core Demand Countries in Latin America")
 st.dataframe(country_focus, use_container_width=True)
 
 st.caption("Note: Cloudscene is a live commercial directory, so facility counts may change over time.")
+
+csv_data = city_data.to_csv(index=False).encode("utf-8")
+
+st.download_button(
+    label="Download Mexico market data as CSV",
+    data=csv_data,
+    file_name="mexico_market_data.csv",
+    mime="text/csv"
+)
 
 st.markdown("### Sources")
 st.markdown("""
